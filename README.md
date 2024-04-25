@@ -6,7 +6,7 @@ onde consumimos uma api para fazer a coversão das moedas.
 
 ## Tecnologias
 
-- Java
+- Java 17
 - Maven
 - Git
 
@@ -14,5 +14,7 @@ onde consumimos uma api para fazer a coversão das moedas.
 
 Para acessar a aplicação é fazendo clone desse projeto
 ```bash
-git clone 
+git clone https://github.com/valeriasouza28/oracle-one-challange-conversor-de-moeda.git
 ```
+
+E fazer execução pelo arquivo Main.java em uma IDE como InteliJ.
