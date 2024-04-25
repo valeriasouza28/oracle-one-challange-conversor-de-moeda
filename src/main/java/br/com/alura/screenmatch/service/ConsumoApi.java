@@ -8,29 +8,22 @@ import java.net.http.HttpResponse;
 
 public class ConsumoApi {
 
-
-    public String obterDados() {
+    public String obterDados(String endereco) {
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create("https://v6.exchangerate-api.com/v6/c0a1742c2c9a2a612ce58a45/latest/USD"))
+                .uri(URI.create(endereco))
                 .build();
-
         HttpResponse<String> response = null;
-        try{
+        try {
             response = client
                     .send(request, HttpResponse.BodyHandlers.ofString());
-        }catch(IOException e){
+        } catch (IOException e) {
             throw new RuntimeException(e);
-        }catch(InterruptedException e) {
+        } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
 
-        String  json = response.body();
-
+        String json = response.body();
         return json;
     }
-
-
-
-
 }
